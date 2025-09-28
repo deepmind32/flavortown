@@ -1,0 +1,256 @@
+/* 
+  🍔 Flavortown Main Styles 🍔
+  Bringing the tokens to life with that Triple D energy!
+*/
+
+/* ========================================
+   🌟 GLOBAL STYLES
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ft-font-body);
+  background-color: var(--ft-bg-dark);
+  color: var(--ft-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--ft-space-6);
+}
+
+/* ========================================
+   🎯 HERO SECTION
+   ======================================== */
+
+.hero {
+  text-align: center;
+  padding: var(--ft-space-10) 0;
+  background: linear-gradient(135deg, var(--ft-bg-dark) 0%, var(--ft-bg-card) 100%);
+  border-radius: var(--ft-radius-lg);
+  margin-bottom: var(--ft-space-8);
+  box-shadow: var(--ft-shadow-lg);
+}
+
+.hero__title {
+  font-family: var(--ft-font-display);
+  font-size: var(--ft-text-5xl);
+  font-weight: var(--ft-weight-black);
+  color: var(--ft-primary);
+  text-shadow: var(--ft-glow-primary);
+  margin: 0 0 var(--ft-space-4) 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero__subtitle {
+  font-size: var(--ft-text-xl);
+  font-weight: var(--ft-weight-medium);
+  color: var(--ft-text-secondary);
+  margin: 0;
+  font-style: italic;
+}
+
+/* ========================================
+   📝 CONTENT SECTIONS  
+   ======================================== */
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ft-space-8);
+}
+
+.demo-section {
+  background-color: var(--ft-bg-card);
+  border-radius: var(--ft-radius-lg);
+  padding: var(--ft-space-8);
+  box-shadow: var(--ft-shadow-md);
+}
+
+.section-title {
+  font-family: var(--ft-font-display);
+  font-size: var(--ft-text-3xl);
+  color: var(--ft-accent);
+  text-align: center;
+  margin: 0 0 var(--ft-space-6) 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   🔥 BUTTON SHOWCASE - The Main Event!
+   ======================================== */
+
+.button-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ft-space-4);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base Button Styles - Foundation of Flavor */
+.btn {
+  /* Typography */
+  font-family: var(--ft-font-display);
+  font-size: var(--ft-text-lg);
+  font-weight: var(--ft-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  /* Layout */
+  padding: var(--ft-space-4) var(--ft-space-6);
+  border: none;
+  border-radius: var(--ft-radius-pill);
+  cursor: pointer;
+  
+  /* Transitions - Smooth like butter */
+  transition: 
+    transform var(--ft-duration-base) var(--ft-ease-out),
+    box-shadow var(--ft-duration-base) var(--ft-ease-out),
+    filter var(--ft-duration-fast) var(--ft-ease-out);
+  
+  /* Base shadow */
+  box-shadow: var(--ft-shadow-md);
+  
+  /* Remove default button styles */
+  outline: none;
+  user-select: none;
+}
+
+/* Button Hover States - Where the magic happens! */
+.btn:hover {
+  transform: translateY(-2px) scale(var(--ft-scale-hover));
+  filter: brightness(1.1);
+}
+
+.btn:active {
+  transform: translateY(0) scale(var(--ft-scale-active));
+  transition-duration: var(--ft-duration-fast);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--ft-accent);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   🎨 BUTTON VARIANTS - Flavor Profiles
+   ======================================== */
+
+/* Primary - Nacho Yellow Goodness */
+.btn--primary {
+  background-color: var(--ft-primary);
+  color: var(--ft-text-inverse);
+  box-shadow: var(--ft-glow-primary);
+}
+
+.btn--primary:hover {
+  box-shadow: var(--ft-glow-primary), var(--ft-shadow-xl);
+}
+
+/* Secondary - Hot Sauce Fire */
+.btn--secondary {
+  background-color: var(--ft-secondary);
+  color: var(--ft-text-primary);
+  box-shadow: var(--ft-glow-secondary);
+}
+
+.btn--secondary:hover {
+  box-shadow: var(--ft-glow-secondary), var(--ft-shadow-xl);
+}
+
+/* Accent - Soda Fizz Electric */
+.btn--accent {
+  background-color: var(--ft-accent);
+  color: var(--ft-text-inverse);
+  box-shadow: var(--ft-glow-accent);
+}
+
+.btn--accent:hover {
+  box-shadow: var(--ft-glow-accent), var(--ft-shadow-xl);
+}
+
+/* Success - Fresh Guac Green */
+.btn--success {
+  background-color: var(--ft-success);
+  color: var(--ft-text-inverse);
+  box-shadow: var(--ft-glow-success);
+}
+
+.btn--success:hover {
+  box-shadow: var(--ft-glow-success), var(--ft-shadow-xl);
+}
+
+/* ========================================
+   📱 RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: var(--ft-text-4xl);
+  }
+  
+  .hero__subtitle {
+    font-size: var(--ft-text-lg);
+  }
+  
+  .button-showcase {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .container {
+    padding: var(--ft-space-4);
+  }
+}
+
+/* ========================================
+   ✨ BONUS ANIMATIONS - Extra Flavor
+   ======================================== */
+
+/* Pulse animation for extra spice */
+@keyframes ft-pulse {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(var(--ft-scale-pulse)); 
+  }
+}
+
+/* Add pulse on focus for accessibility */
+.btn:focus-visible {
+  animation: ft-pulse var(--ft-duration-slow) var(--ft-ease-in-out) infinite;
+}
+
+/* Smooth entrance animation */
+@keyframes ft-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(var(--ft-space-8));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.demo-section {
+  animation: ft-slideUp var(--ft-duration-slow) var(--ft-ease-out);
+}

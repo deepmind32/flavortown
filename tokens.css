@@ -1,0 +1,178 @@
+/* 
+  🍔 Flavortown Design Tokens 🍔
+  The ultimate flavor-packed design system for teen-friendly neon gamer vibes
+*/
+
+:root {
+  /* ========================================
+     🎨 COLOR PALETTE - Neon Gamer Food Vibes
+     ======================================== */
+  
+  /* Primary Colors - The Main Attractions */
+  --ft-primary: #fdd835;        /* neon nacho yellow */
+  --ft-secondary: #ff5722;      /* fiery hot sauce */
+  --ft-accent: #00e5ff;         /* soda fizz teal */
+  
+  /* Background Colors */
+  --ft-bg-dark: #121212;        /* charcoal black */
+  --ft-bg-light: #fafafa;       /* off-white cream */
+  --ft-bg-card: #1e1e1e;        /* slightly lighter than dark for cards */
+  
+  /* Text Colors */
+  --ft-text-primary: #ffffff;   /* crisp white */
+  --ft-text-secondary: #bdbdbd; /* muted grey */
+  --ft-text-inverse: #121212;   /* dark text on light backgrounds */
+  
+  /* Feedback Colors - Food-Inspired Status */
+  --ft-success: #76ff03;        /* fresh guac green */
+  --ft-warning: #ff9100;        /* nacho cheese orange */
+  --ft-error: #ff1744;          /* hot chili red */
+  --ft-info: var(--ft-accent);  /* use our teal for info */
+
+  /* ========================================
+     ✍️ TYPOGRAPHY - Bold & Chunky Vibes
+     ======================================== */
+  
+  /* Font Families */
+  --ft-font-display: 'Luckiest Guy', cursive;  /* chunky display font */
+  --ft-font-body: 'Inter', sans-serif;         /* clean body text */
+  
+  /* Font Sizes - 8-point scale */
+  --ft-text-xs: 0.75rem;    /* 12px */
+  --ft-text-sm: 0.875rem;   /* 14px */
+  --ft-text-base: 1rem;     /* 16px */
+  --ft-text-lg: 1.125rem;   /* 18px */
+  --ft-text-xl: 1.25rem;    /* 20px */
+  --ft-text-2xl: 1.5rem;    /* 24px */
+  --ft-text-3xl: 1.875rem;  /* 30px */
+  --ft-text-4xl: 2.25rem;   /* 36px */
+  --ft-text-5xl: 3rem;      /* 48px */
+  --ft-text-6xl: 4rem;      /* 64px */
+  
+  /* Font Weights */
+  --ft-weight-normal: 400;
+  --ft-weight-medium: 500;
+  --ft-weight-semibold: 600;
+  --ft-weight-bold: 700;
+  --ft-weight-black: 900;
+
+  /* ========================================
+     📐 SPACING SCALE - 4-Point System
+     ======================================== */
+  
+  --ft-space-0: 0;
+  --ft-space-1: 4px;
+  --ft-space-2: 8px;
+  --ft-space-3: 12px;
+  --ft-space-4: 16px;
+  --ft-space-5: 24px;
+  --ft-space-6: 32px;
+  --ft-space-7: 48px;
+  --ft-space-8: 64px;
+  --ft-space-9: 96px;
+  --ft-space-10: 128px;
+
+  /* ========================================
+     🔄 BORDER RADIUS - Fun & Exaggerated
+     ======================================== */
+  
+  --ft-radius-none: 0;
+  --ft-radius-sm: 4px;
+  --ft-radius-md: 12px;
+  --ft-radius-lg: 24px;
+  --ft-radius-xl: 32px;
+  --ft-radius-pill: 999px;      /* perfect pills */
+  --ft-radius-circle: 50%;      /* perfect circles */
+
+  /* ========================================
+     🌟 SHADOWS - Neon Glow Effects
+     ======================================== */
+  
+  /* Basic Shadows */
+  --ft-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --ft-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --ft-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --ft-shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.6);
+  
+  /* Neon Glow Shadows - The Special Sauce! */
+  --ft-glow-primary: 0 0 12px var(--ft-primary), 0 0 24px rgba(253, 216, 53, 0.4);
+  --ft-glow-secondary: 0 0 12px var(--ft-secondary), 0 0 24px rgba(255, 87, 34, 0.4);
+  --ft-glow-accent: 0 0 12px var(--ft-accent), 0 0 24px rgba(0, 229, 255, 0.4);
+  --ft-glow-success: 0 0 12px var(--ft-success), 0 0 24px rgba(118, 255, 3, 0.4);
+  --ft-glow-error: 0 0 12px var(--ft-error), 0 0 24px rgba(255, 23, 68, 0.4);
+
+  /* ========================================
+     ⚡ ANIMATION - Snappy & Playful Motion
+     ======================================== */
+  
+  /* Timing Functions */
+  --ft-ease-linear: linear;
+  --ft-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ft-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ft-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ft-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Duration Scale */
+  --ft-duration-instant: 0ms;
+  --ft-duration-fast: 150ms;
+  --ft-duration-base: 300ms;
+  --ft-duration-slow: 600ms;
+  --ft-duration-slower: 1000ms;
+
+  /* ========================================
+     📏 LAYOUT & SIZING
+     ======================================== */
+  
+  /* Common Sizes */
+  --ft-size-xs: 20px;
+  --ft-size-sm: 24px;
+  --ft-size-md: 32px;
+  --ft-size-lg: 48px;
+  --ft-size-xl: 64px;
+  --ft-size-2xl: 80px;
+  
+  /* Z-Index Scale */
+  --ft-z-base: 0;
+  --ft-z-dropdown: 1000;
+  --ft-z-sticky: 1010;
+  --ft-z-overlay: 1020;
+  --ft-z-modal: 1030;
+  --ft-z-tooltip: 1040;
+  
+  /* Breakpoints (for reference in media queries) */
+  --ft-breakpoint-sm: 640px;
+  --ft-breakpoint-md: 768px;
+  --ft-breakpoint-lg: 1024px;
+  --ft-breakpoint-xl: 1280px;
+
+  /* ========================================
+     🎮 INTERACTIVE STATES
+     ======================================== */
+  
+  /* Opacity Levels */
+  --ft-opacity-disabled: 0.4;
+  --ft-opacity-muted: 0.6;
+  --ft-opacity-hover: 0.8;
+  
+  /* Transform Scale */
+  --ft-scale-hover: 1.05;
+  --ft-scale-active: 0.95;
+  --ft-scale-pulse: 1.1;
+}
+
+/* ========================================
+   🔧 UTILITY CLASSES - Quick Access
+   ======================================== */
+
+/* Font Family Utilities */
+.ft-font-display { font-family: var(--ft-font-display); }
+.ft-font-body { font-family: var(--ft-font-body); }
+
+/* Color Utilities */
+.ft-text-primary { color: var(--ft-primary); }
+.ft-text-secondary { color: var(--ft-secondary); }
+.ft-text-accent { color: var(--ft-accent); }
+
+.ft-bg-primary { background-color: var(--ft-primary); }
+.ft-bg-secondary { background-color: var(--ft-secondary); }
+.ft-bg-accent { background-color: var(--ft-accent); }
